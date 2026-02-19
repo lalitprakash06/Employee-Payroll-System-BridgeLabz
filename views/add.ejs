@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Add Employee</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Employee</h2>
+        <form action="/add" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="department" placeholder="Department" required>
+            <input type="number" name="salary" placeholder="Basic Salary" required>
+            <button type="submit" class="btn-add">Save Employee</button>
+            <a href="/">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

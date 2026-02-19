@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Employee Payroll System</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Details</h1>
+            <a href="/add" class="btn-add">+ Add User</a>
+        </header>
+
+        <section class="stats-grid">
+            <div class="card"><p>TOTAL EMPLOYEES</p><h3><%= stats.totalEmployees %></h3></div>
+            <div class="card"><p>DEPARTMENTS</p><h3><%= stats.departments %></h3></div>
+            <div class="card"><p>TOTAL BASIC</p><h3>₹<%= stats.totalBasic.toLocaleString('en-IN') %></h3></div>
+            <div class="card"><p>TOTAL TAX (12%)</p><h3>₹<%= stats.totalTax.toLocaleString('en-IN') %></h3></div>
+            <div class="card"><p>TOTAL NET</p><h3 style="color:#28a745">₹<%= stats.totalNet.toLocaleString('en-IN') %></h3></div>
+            <div class="card"><p>AVERAGE SALARY</p><h3>₹<%= stats.avgSalary.toLocaleString('en-IN') %></h3></div>
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>DEPARTMENT</th>
+                    <th>BASIC SALARY</th>
+                    <th>NET SALARY</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(emp => { 
+                    let tax = emp.salary * 0.12; 
+                    let net = emp.salary - tax; 
+                %>
+                <tr>
+                    <td><strong><%= emp.name %></strong></td>
+                    <td><span class="badge"><%= emp.department %></span></td>
+                    <td>₹<%= emp.salary.toLocaleString('en-IN') %></td>
+                    <td>₹<%= net.toLocaleString('en-IN') %></td>
+                    <td>
+                        <a href="/edit/<%= emp.id %>" class="btn-icon">✎</a>
+                        <a href="/delete/<%= emp.id %>" class="btn-icon delete">🗑</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

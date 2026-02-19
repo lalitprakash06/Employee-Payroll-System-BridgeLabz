@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit Employee</h1>
+            <a href="/" class="btn-add">Back to List</a>
+        </header>
+
+        <div class="card" style="text-align: left; max-width: 500px; margin: 20px auto;">
+            <form action="/edit/<%= employee.id %>" method="POST">
+                <div style="margin-bottom: 15px;">
+                    <label>Full Name</label>
+                    <input type="text" name="name" value="<%= employee.name %>" required 
+                           style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ddd;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label>Department</label>
+                    <input type="text" name="department" value="<%= employee.department %>" required 
+                           style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ddd;">
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label>Basic Salary (₹)</label>
+                    <input type="number" name="salary" value="<%= employee.salary %>" required 
+                           style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ddd;">
+                </div>
+                
+                <button type="submit" class="btn-add" style="border: none; width: 100%; cursor: pointer;">
+                    Update Employee Details
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
