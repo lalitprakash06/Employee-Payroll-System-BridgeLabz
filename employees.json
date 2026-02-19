@@ -1,0 +1,38 @@
+[
+  {
+    "id": 9724789271654,
+    "name": "Ananya Iyer",
+    "department": "Full Stack",
+    "salary": 90000
+  },
+  {
+    "id": 7991675838364,
+    "name": "Vikram Singh",
+    "department": "Quality Assurance",
+    "salary": 55000
+  },
+  {
+    "id": 3279473988354,
+    "name": "Sanya Malhotra",
+    "department": "Project Management",
+    "salary": 95000
+  },
+  {
+    "id": 1771395472026,
+    "name": "Satyendra Singh",
+    "department": "Electrical ",
+    "salary": 71000
+  },
+  {
+    "id": 1771402652966,
+    "name": "Ankit Chaudhary",
+    "department": "Management ",
+    "salary": 87000
+  },
+  {
+    "id": 1771490633873,
+    "name": "Ankit Chaudhary",
+    "department": "Management ",
+    "salary": 45000
+  }
+]
