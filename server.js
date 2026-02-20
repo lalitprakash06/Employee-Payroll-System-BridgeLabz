@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const fileHandler = require('./modules/fileHandler'); 
+const fileHandler = require('./modules/fileHandler');
 
 const app = express();
 
