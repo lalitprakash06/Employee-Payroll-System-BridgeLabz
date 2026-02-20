@@ -75,7 +75,6 @@ app.get('/edit/:id', async (req, res) => {
     }
 });
 
-// 6. UPDATE
 app.post('/edit/:id', async (req, res) => {
     try {
         let employees = await fileHandler.read();
